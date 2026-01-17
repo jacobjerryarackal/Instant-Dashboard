@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.examplesToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.examplesToggle:hover {
+  background: #e2e8f0;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 120px;
+  background: #f8fafc;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.inputFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.charCount {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.examples {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+.examplesHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.examplesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exampleButton {
+  text-align: left;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exampleButton:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}

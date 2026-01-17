@@ -1,0 +1,158 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  white-space: nowrap;
+}
+
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.editorLabel {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.clearButton {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 200px;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.textarea.invalid {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.statusBar {
+  padding: 12px;
+  border-radius: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #059669;
+  font-size: 0.875rem;
+}
+
+.success .charCount {
+  margin-left: auto;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.placeholder {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.json-controls {
+  /* Ensures buttons are in a visible row */
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.json-controls button {
+  /* Makes buttons look like actual buttons */
+  padding: 8px 16px;
+  background-color: #f0f5ff; /* Light blue background */
+  border: 1px solid #4a7bff; /* Blue border */
+  color: #4a7bff; /* Blue text */
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.json-controls button:hover {
+  background-color: #4a7bff; /* Blue on hover */
+  color: white;
+}

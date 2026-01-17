@@ -1,0 +1,106 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Variants */
+.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.primary:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sizes */
+.small {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  border-radius: 12px;
+}
+
+.medium {
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 18px 36px;
+  font-size: 1.125rem;
+  border-radius: 20px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Loading state */
+.loading {
+  color: transparent !important;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  position: absolute;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Ripple effect */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button:active:not(:disabled)::before {
+  width: 300px;
+  height: 300px;
+}
