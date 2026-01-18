@@ -13,16 +13,20 @@ Users provide structured JSON data along with a natural language prompt, and the
 ### Generated Website Preview
 
 ![Website Preview](public/screenshots/output1.png)
-![Website Preview](public/screenshots/output2.png)
 
 ### JSON Input & Prompt
 
+![JSON Preview](public/screenshots/output2.png)
 ![JSON Input](public/screenshots/output3.png)
 
 ### Awesome Design
 
 ![Design](public/screenshots/output4.png)
 ![Design](public/screenshots/output5.png)
+
+### Generated Dashboard Preview
+
+![Dashboard Preview](public/screenshots/output1.png)
 
 ---
 
