@@ -259,21 +259,9 @@ export default function Home() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 12
-      }
-    }
-  };
-
-  const floatVariants = {
-    hidden: { y: 0 },
-    visible: {
-      y: [0, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
       }
     }
   };
@@ -316,12 +304,17 @@ export default function Home() {
           <div className={`${styles.gradientOrb} ${styles.orb3}`}></div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Floating Elements - Fixed */}
         <motion.div 
           className={styles.floatingElement1}
-          variants={floatVariants}
-          initial="hidden"
-          animate="visible"
+          animate={{ 
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         >
           <div className={styles.floatingIcon}>
             <CpuIcon size={24} />
@@ -330,10 +323,15 @@ export default function Home() {
         
         <motion.div 
           className={styles.floatingElement2}
-          variants={floatVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.5 }}
+          animate={{ 
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5
+          }}
         >
           <div className={styles.floatingIcon}>
             <Database size={24} />
@@ -342,10 +340,15 @@ export default function Home() {
         
         <motion.div 
           className={styles.floatingElement3}
-          variants={floatVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
+          animate={{ 
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
         >
           <div className={styles.floatingIcon}>
             <BarChart3 size={24} />
