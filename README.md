@@ -1,6 +1,6 @@
 # Instant Dashboard App
 
-Live Demo: https://instant-dashboard.vercel.app
+Live Demo: https://instant-dashboard-wine.vercel(https://instant-dashboard-wine.vercel.app/)
 
 This project demonstrates an AI-powered web application that transforms raw JSON data into a visual dashboard preview using a large language model.
 
