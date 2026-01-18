@@ -26,7 +26,9 @@ Users provide structured JSON data along with a natural language prompt, and the
 
 ### Generated Dashboard Preview
 
-![Dashboard Preview](public/screenshots/output1.png)
+![Dashboard Preview](public/screenshots/output6.png)
+![Dashboard Preview](public/screenshots/output7.png)
+![Dashboard Preview](public/screenshots/output8.png)
 
 ---
 
