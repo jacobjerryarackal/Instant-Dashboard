@@ -42,7 +42,7 @@ export async function generateDashboardCode(
   userPrompt: string
 ): Promise<{ code: string; error?: string; mode: 'api' | 'mock' }> {
   
-  // If Gemini is available, use it
+  
   if (genAI) {
     try {
       const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
@@ -67,14 +67,14 @@ Return ONLY the HTML/CSS code:`;
       const response = await result.response;
       let code = response.text();
       
-      // Clean up the response
+      
       code = code
         .replace(/```html\n?/g, '')
         .replace(/```\n?/g, '')
         .replace(/```css\n?/g, '')
         .trim();
       
-      // Ensure it starts with doctype
+    
       if (!code.includes('<!DOCTYPE')) {
         code = `<!DOCTYPE html>\n${code}`;
       }
@@ -86,7 +86,7 @@ Return ONLY the HTML/CSS code:`;
       
     } catch (error: any) {
       console.error('Gemini API Error:', error);
-      // Fallback to enhanced mock
+      
       return {
         code: generateEnhancedMock(jsonData, userPrompt),
         error: error.message || 'API request failed',
@@ -95,7 +95,7 @@ Return ONLY the HTML/CSS code:`;
     }
   }
   
-  // Use enhanced mock if no API
+ 
   return {
     code: generateEnhancedMock(jsonData, userPrompt),
     mode: 'mock'

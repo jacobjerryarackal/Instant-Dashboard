@@ -55,7 +55,7 @@ export default function Home() {
   const [step, setStep] = useState(1);
   const [generationTime, setGenerationTime] = useState<number | null>(null);
 
-  // Sample JSON for initial load
+  
   useEffect(() => {
     const sampleJSON = {
       report_title: "Monthly Analytics Dashboard",
@@ -109,10 +109,10 @@ export default function Home() {
     setIsPreviewVisible(false);
 
     try {
-      // Validate JSON
+      
       const parsedData = JSON.parse(jsonData);
       
-      // Show loading toast
+      
       const loadingToast = toast.loading(
         <div className={styles.toastContent}>
           <Brain size={20} />
@@ -132,7 +132,7 @@ export default function Home() {
         }
       );
       
-      // Generate dashboard code using Gemini
+     
       const result = await generateDashboardCode(parsedData, userPrompt);
       
       const endTime = Date.now();
@@ -146,7 +146,7 @@ export default function Home() {
       setIsPreviewVisible(true);
       setStep(3);
       
-      // Update toast to success
+    
       toast.dismiss(loadingToast);
       toast.success(
         <div className={styles.toastContent}>
